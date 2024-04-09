@@ -71,7 +71,7 @@ namespace ASze.CustomPlayButton
 
         public override Vector2 GetWindowSize()
         {
-            var width = COLLUMN_WIDTH * (CustomPlayButton.Bookmark.HasBookmark() ? 2 : 1);
+            var width = COLLUMN_WIDTH * (CustomPlayButton.Bookmark.HasBookmark() ? 2 : 1) + 22;
             var maxRow = Mathf.Max(buildScenes.Length, CustomPlayButton.Bookmark.bookmarks.Count, 1);
             var height = Mathf.Min(22 * maxRow + 26, Screen.currentResolution.height * 0.5f);
             return new Vector2(width, height);
